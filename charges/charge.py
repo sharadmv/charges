@@ -124,9 +124,11 @@ def batch_receipt(receipt: Receipt, *, itemized: bool) -> Receipt:
 
 @click.command
 @click.argument("receipt_file", type=click.Path(path_type=pathlib.Path))
-@click.option("--execute/--dry-run", default=False)
-@click.option("--print-receipt/--no-print-receipt", default=True)
-@click.option("--itemized/--no-itemized", default=True)
+@click.option("--execute/--dry-run", default=False, help="Whether to charge or do a dry run")
+@click.option("--print-receipt/--no-print-receipt", default=True,
+              help="Whether or not to print out the receipt")
+@click.option("--itemized/--no-itemized", default=True, 
+              help="Whether or not to charge with an itemized receipt")
 def main(receipt_file, execute, print_receipt, itemized):
   receipt_file = receipt_file.expanduser()
   client = vc.VenmoClient(config_dir='~/.config/venmo/')
