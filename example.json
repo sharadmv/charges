@@ -1,0 +1,16 @@
+{
+  "date": "2022-10-21",
+  "name": "Taco Bell",
+  "aliases": {
+    "sharad": "me",
+    "john": "John-Doe",
+    "jane": "Jane-Doe",
+  },
+  "items": [
+    ["Mexican Pizza", ["sharad", "john"], 5.99],
+    ["Mexican Pizza", ["sharad", "jane"], 5.99],
+    ["Nachos Bell Grande", ["sharad"], 8.99],
+    ["Cinnamon Twists", ["john"], 1.99],
+  ],
+  "total": 20.00
+}
