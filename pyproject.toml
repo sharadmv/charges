@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "charges"
+description = "Automatic Venmo charging"
+requires-python = ">=3.8"
+license = {text = "MIT License"}
+dependencies = [
+    "venmo-client",
+]
+dynamic = ["version"]
+
+[project.scripts]
+venmo-charge = "charges.charge:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "charges.__version__"}
