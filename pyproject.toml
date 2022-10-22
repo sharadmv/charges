@@ -15,5 +15,9 @@ dynamic = ["version"]
 [project.scripts]
 venmo-charge = "charges.charge:main"
 
+
 [tool.setuptools.dynamic]
 version = {attr = "charges.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["charges"]
