@@ -8,13 +8,14 @@ description = "Automatic Venmo charging"
 requires-python = ">=3.8"
 license = {text = "MIT License"}
 dependencies = [
-    "venmo-client",
+  "venmo-client",
+  "rich",
+  "click",
 ]
 dynamic = ["version"]
 
 [project.scripts]
 venmo-charge = "charges.charge:main"
-
 
 [tool.setuptools.dynamic]
 version = {attr = "charges.__version__"}
